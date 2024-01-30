@@ -10,6 +10,7 @@ WORKDIR /app
 
 # Only run npm install if these files change.
 COPY package*.json ./
+RUN adduser opsmx
 
 # Install dependencies
 RUN npm ci
