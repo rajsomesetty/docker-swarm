@@ -10,8 +10,7 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-pool:
-  vmImage: Default
+pool: Default
 stages:
 - stage: Build
   displayName: Build image
