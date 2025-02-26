@@ -12,19 +12,6 @@ variables:
   tag: '$(Build.BuildId)'
 pool: Default
 stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
 - stage: SSD
   displayName: Send Events
   jobs:
